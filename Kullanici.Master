@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Kullanici.master.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.Kullanici" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 700px;
+            height: 150px;
+            margin-left: 300px;
+            background-color: #00CCFF;
+        }
+
+        .auto-style2 {
+            width: 700px;
+            height: 20px;
+            margin-left: 300px;
+        }
+
+        .auto-style3 {
+            width: 700px;
+            height: 25px;
+            margin-left: 300px;
+            background-color: #00CCFF;
+        }
+
+        .auto-style4 {
+            width: 200px;
+            height: 200px;
+            margin-left: 300px;
+            background-color: #00CCFF;
+        }
+
+        .auto-style5 {
+            width: 450px;
+            height: 350px;
+            margin-left: 250px;
+            background-color: #00CCFF;
+        }
+        .auto-style6 {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="auto-style1"></div>
+        <div class="auto-style2"></div>
+        <div class="auto-style3">
+            <table class="auto-style6" align="center">
+                <tr>
+                    <td><strong><a href ="AnaSayfa.aspx">Ana Sayfa</a></td>
+                    <td><strong><a href ="GununYemegi.aspx">Günün Yemeği</a></td>
+                    <td><strong><a href ="TarifOner.aspx">Tarif Önerileri</a></td>
+                    <td><strong><a href ="Hakkimizda.aspx">Hakkımızda</a></td>
+                    <td><strong><a href ="iletisim.aspx">İletişim</a></strong></td>
+                </tr>
+            </table>
+        </div>
+        <div class="auto-style2"></div>
+        <div class="auto-style4">
+            <div class="auto-style5">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>
