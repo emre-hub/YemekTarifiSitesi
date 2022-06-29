@@ -29,22 +29,14 @@
             background-color: #00CCFF;
         }
 
-        .auto-style4 {
-            width: 200px;
-            height: 200px;
-            margin-left: 300px;
-            background-color: #00CCFF;
-        }
-
-        .auto-style5 {
-            width: 450px;
-            height: 350px;
-            margin-left: 250px;
-            background-color: #00CCFF;
-        }
-
         .auto-style6 {
             width: 100%;
+        }
+        .auto-style7 {
+            text-align: center;
+        }
+        .auto-style8 {
+            font-size: large;
         }
     </style>
 </head>
@@ -67,7 +59,17 @@
         <div class="auto-style2">&nbsp;</div>
         <div style="margin-left: 300px; width: 700px; height: 300px;">
 
-            <div style="width: 200px; float: left; height: 100px; background-color: #00CCFF;"></div>
+            <div style="width: 200px; float: left; height: auto; background-color: #00CCFF;">
+                <div class="auto-style7">
+                    <strong><span class="auto-style8">KATEGORİLER</span></strong><br />
+                    <br />
+                </div>
+                <asp:DataList ID="DataList1" runat="server">
+                    <ItemTemplate>
+                        <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>' BorderColor="White" BorderStyle="Solid" BorderWidth="2px"></asp:Label>
+                    </ItemTemplate>
+                </asp:DataList>
+            </div>
             <div style="width: 450px; float: left; height: 300px; background-color: #00CCFF; margin-left: 50px;">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
