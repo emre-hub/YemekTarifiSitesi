@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="TarifOner.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.TarifOner" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="TarifOner.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.TarifOner" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style10 {
@@ -15,6 +15,10 @@
         font-weight: bold;
         font-style: italic;
     }
+        .auto-style14 {
+            text-align: center;
+            background-color: #33CCFF;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -61,7 +65,7 @@
         </tr>
         <tr>
             <td>&nbsp;</td>
-            <td class="auto-style7">
+            <td class="auto-style14">
                 <strong><em>
                 <asp:Button ID="BtnTarifOner" runat="server" Text="Gönder" BackColor="#00CC99" CssClass="auto-style13" Height="54px" Width="148px" />
                 </em></strong>
