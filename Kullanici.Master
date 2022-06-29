@@ -6,6 +6,8 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
+    <link href="StyleSheet.css" rel="stylesheet" />
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -24,16 +26,19 @@
 
         .auto-style3 {
             width: 700px;
-            height: 25px;
+            height: 40px;
             margin-left: 300px;
-            background-color: #00CCFF;
+            background-color: #FFFFFF;
         }
 
         .auto-style6 {
             width: 100%;
+            color: #FFFFFF;
+            height: 40px;
         }
         .auto-style7 {
             text-align: center;
+            background-color:aquamarine;
         }
         .auto-style8 {
             font-size: large;
@@ -50,11 +55,11 @@
         <div class="auto-style3">
             <table class="auto-style6" align="center">
                 <tr>
-                    <td><strong><a href="AnaSayfa.aspx">Ana Sayfa</a></td>
-                    <td><strong><a href="GununYemegi.aspx">Günün Yemeği</a></td>
-                    <td><strong><a href="TarifOner.aspx">Tarif Önerileri</a></td>
-                    <td><strong><a href="Hakkimizda.aspx">Hakkımızda</a></td>
-                    <td><strong><a href="iletisim.aspx">İletişim</a></strong></td>
+                    <td class="auto-style7"><strong><a href="AnaSayfa.aspx">Ana Sayfa</a></strong></td>
+                    <td class="auto-style7"><strong><a href="GununYemegi.aspx">Günün Yemeği</a></strong></td>
+                    <td class="auto-style7"><strong><a href="TarifOner.aspx">Tarif Önerileri</a></strong></td>
+                    <td class="auto-style7"><strong><a href="Hakkimizda.aspx">Hakkımızda</a></strong></td>
+                    <td class="auto-style7"><strong><a href="iletisim.aspx">İletişim</a></strong></td>
                 </tr>
             </table>
         </div>
@@ -63,7 +68,7 @@
         <div style="margin-left: 300px; width: 700px; height: 300px;">
 
             <div style="width: 200px; float: left; height: auto; background-color: #00CCFF;">
-                <div class="auto-style7">
+                <div style="background-color: #00CCFF; text-align: center;">
                     <strong><span class="auto-style8">KATEGORİLER</span></strong><br />
                     <br />
                 </div>
