@@ -27,6 +27,17 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
                 Label3.Text = sqlDataReader[0].ToString(); //veriye ulastigimda YemekAdi olan 0. index'teki degeri String olarak Label3'e atiyorum.
             }
             conn.baglanti().Close();
+            
+            
+            //Yorumları Listele
+
+            //ilgili yemege ait yorumlara gore sorguyu filtreliyorum
+            //YemekId'sine gore tum yorumlari getirdim : 
+            SqlCommand komut2 = new SqlCommand("SELECT * FROM Tbl_Yorumlar WHERE YemekId=@p2", conn.baglanti());
+            komut2.Parameters.AddWithValue("@p2", yemekid);
+            SqlDataReader dr2 = komut2.ExecuteReader();
+            DataList2.DataSource = dr2;
+            DataList2.DataBind();
         }
     }
 }
