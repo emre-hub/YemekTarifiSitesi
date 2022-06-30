@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="iletisim.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.iletisim" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="iletisim.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.iletisim" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
     .auto-style10 {
@@ -59,7 +59,7 @@
     <tr>
         <td>&nbsp;</td>
         <td class="auto-style14"><strong>
-            <asp:Button ID="btnGonder" runat="server" CssClass="fb8" Text="Gönder" Width="150px" />
+            <asp:Button ID="btnGonder" runat="server" CssClass="fb8" Text="Gönder" Width="150px" OnClick="btnGonder_Click" />
             </strong></td>
     </tr>
 </table>
