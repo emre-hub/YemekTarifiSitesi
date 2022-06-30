@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="AnaSayfa.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.AnaSayfa" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Kullanici.Master" AutoEventWireup="true" CodeBehind="AnaSayfa.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.AnaSayfa" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
@@ -7,12 +7,17 @@
         }
         .auto-style11 {
             font-size: x-large;
+            color: #99FFCC;
         }
         .auto-style12 {
-            background-color: #66CCFF;
+            background-color: #3366CC;
         }
         .auto-style13 {
-            background-color: #CCFFFF;
+            background-color: #9966FF;
+        }
+        .auto-style14 {
+            color: #00CC00;
+            background-color: #33CCFF;
         }
     </style>
 </asp:Content>
@@ -38,10 +43,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>&nbsp;<strong>Eklenme Tarihi :</strong>&nbsp;<asp:Label ID="Label6" runat="server" Text='<%# Eval("YemekTarih") %>'></asp:Label>
-                        &nbsp; <strong>-&nbsp; <em>Puan :</em></strong> <em>
-                        <asp:Label ID="Label7" runat="server" Text='<%# Eval("YemekPuan") %>'></asp:Label>
-                        </em></td>
+                    <td>&nbsp;<strong>Eklenme Tarihi :</strong>&nbsp;<strong><asp:Label ID="Label6" runat="server" CssClass="auto-style14" Text='<%# Eval("YemekTarih") %>'></asp:Label>
+                        </strong>&nbsp; <strong>-&nbsp; <em>Puan :</em></strong> <em><strong>
+                        <asp:Label ID="Label7" runat="server" CssClass="auto-style14" Text='<%# Eval("YemekPuan") %>'></asp:Label>
+                        </strong></em></td>
                 </tr>
                 <tr>
                     <td class="auto-style13">&nbsp;</td>
