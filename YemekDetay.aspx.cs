@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -27,8 +27,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
                 Label3.Text = sqlDataReader[0].ToString(); //veriye ulastigimda YemekAdi olan 0. index'teki degeri String olarak Label3'e atiyorum.
             }
             conn.baglanti().Close();
-            
-            
+
             //Yorumları Listele
 
             //ilgili yemege ait yorumlara gore sorguyu filtreliyorum
@@ -38,6 +37,18 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
             SqlDataReader dr2 = komut2.ExecuteReader();
             DataList2.DataSource = dr2;
             DataList2.DataBind();
+        }
+
+        protected void btnYorumYap_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("INSERT INTO Tbl_Yorumlar (YorumAdSoyad, YorumMail, YorumIcerik, YemekId)" +
+                " VALUES (@p1, @p2, @p3, @p4)", conn.baglanti());
+            komut.Parameters.AddWithValue("@p1", txtAdSoyad.Text);
+            komut.Parameters.AddWithValue("@p2", txtMail.Text);
+            komut.Parameters.AddWithValue("@p3", txtYorum.Text);
+            komut.Parameters.AddWithValue("@p4", yemekid);
+            komut.ExecuteNonQuery();
+            conn.baglanti().Close();                                      
         }
     }
 }
