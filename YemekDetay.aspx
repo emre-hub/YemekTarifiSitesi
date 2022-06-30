@@ -18,6 +18,44 @@
         .auto-style13 {
             background-color: #00FFCC;
         }
+        .auto-style14 {
+            text-align: center;
+            color: #CCFFFF;
+            font-size: large;
+            background-color: #FF3300;
+        }
+        .auto-style15 {
+            color: #FFFFFF;
+        }
+        .auto-style16 {
+            text-align: center;
+        }
+        .auto-style20 {
+            font-weight: bold;
+            color: #000099;
+        }
+        .auto-style21 {
+            color: #006600;
+        }
+        .auto-style22 {
+            width: 106px;
+            text-align: left;
+            color: #006600;
+        }
+        .auto-style23 {
+            width: 106px;
+            height: 23px;
+        }
+        .auto-style24 {
+            height: 23px;
+        }
+        .auto-style25 {
+            width: 106px;
+            text-align: left;
+        }
+        .auto-style26 {
+            width: 106px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -45,4 +83,42 @@
             </table>
         </ItemTemplate>
     </asp:DataList>
+    <br class="auto-style15" />
+    <div class="auto-style14"><strong>YORUM PANELİ</strong></div>
+    <asp:Panel ID="Panel1" runat="server">
+        <table class="auto-style11">
+            <tr>
+                <td class="auto-style23"></td>
+                <td class="auto-style24"></td>
+            </tr>
+            <tr>
+                <td class="auto-style25"><span class="auto-style21">Ad Soyad :</span> </td>
+                <td class="auto-style16">
+                    <asp:TextBox ID="txtAdSoyad" runat="server" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style25"><span class="auto-style21">E-mail :</span> </td>
+                <td class="auto-style16">
+                    <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style22">Yorum :</td>
+                <td class="auto-style16">
+                    <asp:TextBox ID="txtYorum" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style26">&nbsp;</td>
+                <td class="auto-style16"><strong>
+                    <asp:Button ID="btnYorumYap" runat="server" CssClass="auto-style20" Height="50px" OnClick="btnYorumYap_Click" Text="Yorum Yap" Width="150px" />
+                    </strong></td>
+            </tr>
+            <tr>
+                <td class="auto-style26">&nbsp;</td>
+                <td class="auto-style16">&nbsp;</td>
+            </tr>
+        </table>
+    </asp:Panel>
 </asp:Content>
