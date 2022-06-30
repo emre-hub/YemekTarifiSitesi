@@ -94,25 +94,25 @@
             <tr>
                 <td class="auto-style25"><span class="auto-style21">Ad Soyad :</span> </td>
                 <td class="auto-style16">
-                    <asp:TextBox ID="txtAdSoyad" runat="server" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtAdSoyad" runat="server" Width="300px" CssClass="tb5"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style25"><span class="auto-style21">E-mail :</span> </td>
                 <td class="auto-style16">
-                    <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtMail" runat="server" TextMode="Email" Width="300px" CssClass="tb5"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style22">Yorum :</td>
                 <td class="auto-style16">
-                    <asp:TextBox ID="txtYorum" runat="server" Height="100px" TextMode="MultiLine" Width="300px"></asp:TextBox>
+                    <asp:TextBox ID="txtYorum" runat="server" Height="100px" TextMode="MultiLine" Width="300px" CssClass="tb5"></asp:TextBox>
                 </td>
             </tr>
             <tr>
                 <td class="auto-style26">&nbsp;</td>
                 <td class="auto-style16"><strong>
-                    <asp:Button ID="btnYorumYap" runat="server" CssClass="auto-style20" Height="50px" OnClick="btnYorumYap_Click" Text="Yorum Yap" Width="150px" />
+                    <asp:Button ID="btnYorumYap" runat="server" CssClass="tb5" Height="50px" OnClick="btnYorumYap_Click" Text="Yorum Yap" Width="150px" />
                     </strong></td>
             </tr>
             <tr>
