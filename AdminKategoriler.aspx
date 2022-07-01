@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AdminKategoriler.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.AdminKategoriler" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Admin.Master" AutoEventWireup="true" CodeBehind="AdminKategoriler.aspx.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.AdminKategoriler" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style6 {
@@ -15,14 +15,36 @@
     .auto-style9 {
         text-align: right;
     }
-    .auto-style10 {
-        font-size: x-large;
+    .auto-style11 {
+        width: 36px;
+    }
+    .auto-style12 {
+        width: 35px;
+    }
+    .auto-style13 {
+        border: 2px solid #456879;
+        border-radius: 10px;
+        height: 22px;
+        width: 230px;
+        font-weight: bold;
+        font-size: large;
     }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="Panel1" runat="server" CssClass="auto-style6">
-        <span class="auto-style10"><strong style="border: thin solid white">Kategori Listesi</strong></span></asp:Panel>
+        <table class="auto-style5">
+            <tr>
+                <td class="auto-style11"><strong><em>
+                    <asp:Button ID="Button3" runat="server" CssClass="auto-style13" Height="30px" Text="+" Width="30px" OnClick="Button3_Click" />
+                    </em></strong></td>
+                <td class="auto-style12"><strong>
+                    <asp:Button ID="Button2" runat="server" CssClass="auto-style13" Height="30px" Text="-" Width="30px" OnClick="Button2_Click" />
+                    </strong></td>
+                <td>Kategori Listesi</td>
+            </tr>
+        </table>
+</asp:Panel>
     <asp:Panel ID="Panel2" runat="server">
         <asp:DataList ID="DataList1" runat="server" Width="448px">
             <ItemTemplate>
