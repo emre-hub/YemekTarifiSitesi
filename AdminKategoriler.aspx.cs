@@ -19,6 +19,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
             DataList1.DataBind();
 
             Panel2.Visible = false;
+            Panel4.Visible = false;
 
         }
 
@@ -30,6 +31,16 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
         protected void Button2_Click(object sender, EventArgs e)
         {
             Panel2.Visible = false;
+        }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = true;
+        }
+
+        protected void Button5_Click(object sender, EventArgs e)
+        {
+            Panel4.Visible = false;
         }
     }
 }
