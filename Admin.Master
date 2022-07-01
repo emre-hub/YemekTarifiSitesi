@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.Admin" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.Admin" %>
 
 <!DOCTYPE html>
 
@@ -55,25 +55,25 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td>Kategoriler&nbsp;</td>
+                            <td style="border: thin solid #FFFFFF"><a href ="Kategoriler.aspx">Kategoriler&nbsp;</a></td>
                         </tr>
                         <tr>
-                            <td>Yemekler</td>
+                            <td style="border: thin solid #FFFFFF">Yemekler</td>
                         </tr>
                         <tr>
-                            <td>Yorumlar</td>
+                            <td style="border: thin solid #FFFFFF">Yorumlar</td>
                         </tr>
                         <tr>
-                            <td>Mesajlar</td>
+                            <td style="border: thin solid #FFFFFF">Mesajlar</td>
                         </tr>
                         <tr>
-                            <td>Günün Yemeği</td>
+                            <td style="border: thin solid #FFFFFF">Günün Yemeği</td>
                         </tr>
                         <tr>
-                            <td>Öneriler</td>
+                            <td style="border: thin solid #FFFFFF">Öneriler</td>
                         </tr>
                         <tr>
-                            <td>Hakkımızda</td>
+                            <td style="border: thin solid #FFFFFF">Hakkımızda</td>
                         </tr>
                     </table>
                 </div>
