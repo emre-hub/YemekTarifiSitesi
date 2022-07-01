@@ -50,7 +50,9 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="auto-style1"></div>
+        <div class="auto-style1">
+            <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl="~/Images/banner2.jpg" Width="700px" />
+        </div>
         <div class="auto-style2"></div>
         <div class="auto-style3">
             <table class="auto-style6" align="center">
