@@ -55,7 +55,7 @@
                             <td>&nbsp;</td>
                         </tr>
                         <tr>
-                            <td style="border: thin solid #FFFFFF"><a href ="Kategoriler.aspx">Kategoriler&nbsp;</a></td>
+                            <td style="border: thin solid #FFFFFF"><a href ="AdminKategoriler.aspx">Kategoriler&nbsp;</a></td>
                         </tr>
                         <tr>
                             <td style="border: thin solid #FFFFFF">Yemekler</td>
