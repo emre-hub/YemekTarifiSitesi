@@ -57,19 +57,27 @@
     <asp:Panel ID="Panel2" runat="server">
         <asp:DataList ID="DataList1" runat="server" Width="448px">
             <ItemTemplate>
+
                 <table class="auto-style7">
+
                     <tr>
+
                         <td class="auto-style8">
                             <asp:Label ID="Label1" runat="server" Text='<%# Eval("KategoriAd") %>'></asp:Label>
-                            &nbsp;&nbsp;&nbsp; </td>
+                         &nbsp;&nbsp;&nbsp; </td>
+
                         <td class="auto-style9">
-                            <asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/delete.png" Width="30px" />
+                            <a href ="AdminKategoriler.aspx?KategoriId=<%# Eval("KategoriId") %>&islem=sil"><asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/delete.png" Width="30px" /></a>
                         </td>
+
                         <td class="auto-style9">
                             <a href ="KategoriDuzenle.aspx?KategoriId=<%#Eval("KategoriId")%>"><asp:Image ID="Image3" runat="server" Height="30px" ImageUrl="~/Images/update.png" Width="30px" /></a>
                         </td>
+
                     </tr>
+
                 </table>
+
             </ItemTemplate>
         </asp:DataList>
 </asp:Panel>
