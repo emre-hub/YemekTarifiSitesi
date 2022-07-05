@@ -17,7 +17,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
         {
             //KategoriId'ye gore sorgu yapacagiz,
             kategoriid = Request.QueryString["KategoriId"]; // KategoriId'nin bizi sayfaya yonlendiren linkte oldugunu biliyoruz. MasterPage'de tasarladik.
-            //kategoriid ile eşleşen değerleri veritabanından al :
+            //kategoriid ile eşleşen degerleri al : 
             SqlCommand komut = new SqlCommand("SELECT * FROM Tbl_Yemekler WHERE KategoriId=@p1", connection.baglanti()); 
             komut.Parameters.AddWithValue("@p1", kategoriid);
 
