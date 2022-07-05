@@ -36,8 +36,6 @@
         .auto-style17 {
             border: 2px solid #456879;
             border-radius: 10px;
-            height: 22px;
-            width: 230px;
             font-weight: bold;
         }
     </style>
@@ -109,7 +107,7 @@
             <tr>
                 <td>&nbsp;</td>
                 <td class="auto-style3"><strong>
-                    <asp:Button ID="Button6" runat="server" CssClass="auto-style17" Text="Ekle" Width="170px" />
+                    <asp:Button ID="Button6" runat="server" CssClass="auto-style17" Text="Ekle" Width="170px" Height="37px" OnClick="Button6_Click" />
                     </strong></td>
             </tr>
         </table>
