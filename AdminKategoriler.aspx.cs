@@ -11,12 +11,31 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
     public partial class AdminKategoriler : System.Web.UI.Page
     {
         sqlbaglanti conn = new sqlbaglanti();
+
+        string id = "";
+        string islem = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(Page.IsPostBack == false)
+            {
+                id = Request.QueryString["KategoriId"];
+                islem = Request.QueryString["islem"];
+            }
+
             SqlCommand command = new SqlCommand("SELECT * FROM Tbl_Kategoriler", conn.baglanti());
             SqlDataReader sqlDataReader = command.ExecuteReader();
             DataList1.DataSource = sqlDataReader;
             DataList1.DataBind();
+
+            //Silme islemi
+            if(islem == "sil")
+            {
+                SqlCommand commandDeletion = new SqlCommand("DELETE FROM Tbl_Kategoriler WHERE KategoriId=@p1", conn.baglanti());
+                commandDeletion.Parameters.AddWithValue("@p1", id);
+                commandDeletion.ExecuteNonQuery();
+                conn.baglanti().Close();
+            }
+
 
             Panel2.Visible = false;
             Panel4.Visible = false;
@@ -50,5 +69,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
             komut.ExecuteNonQuery();
             conn.baglanti().Close();
         }
+
+
     }
 }
