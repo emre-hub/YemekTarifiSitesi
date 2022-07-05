@@ -47,6 +47,9 @@
         font-weight: bold;
         font-size: large;
     }
+        .auto-style19 {
+            text-align: center;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -113,21 +116,38 @@
                 <td>&nbsp;</td>
             </tr>
             <tr>
-                <td>Kategori Adı :</td>
+                <td>Yemek Adı :</td>
                 <td>
-                    <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtAd" runat="server" Width="300px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td>Kategori Resim : </td>
+                <td>Malzemeler : </td>
                 <td>
-                    <asp:FileUpload ID="FileUpload1" runat="server" />
+                    <asp:TextBox ID="txtMalzeme" runat="server" Width="300px" Height="150px" TextMode="MultiLine"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Yemek Tarifi : </td>
+                <td class="auto-style3">
+                    <asp:TextBox ID="txtTarif" runat="server" Width="300px" Height="250px" TextMode="MultiLine" ></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>Kategori : </td>
+                <td class="auto-style3">
+                    <asp:DropDownList ID="ddlKategori" runat="server" Width="300px">
+                    </asp:DropDownList>
                 </td>
             </tr>
             <tr>
                 <td>&nbsp;</td>
-                <td class="auto-style3"><strong>
-                    <asp:Button ID="Button6" runat="server" CssClass="auto-style17" Text="Ekle" Width="170px" Height="37px"  />
+                <td class="auto-style3">&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td class="auto-style19"><strong>
+                    <asp:Button ID="btnEkle" runat="server" CssClass="auto-style17" Height="40px" Text="Ekle" Width="200px" />
                     </strong></td>
             </tr>
         </table>
