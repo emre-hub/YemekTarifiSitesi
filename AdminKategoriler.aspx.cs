@@ -42,5 +42,13 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
         {
             Panel4.Visible = false;
         }
+
+        protected void Button6_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("INSERT INTO Tbl_Kategoriler (KategoriAd) values(@p1)", conn.baglanti());
+            komut.Parameters.AddWithValue("@p1", TextBox1.Text);
+            komut.ExecuteNonQuery();
+            conn.baglanti().Close();
+        }
     }
 }
