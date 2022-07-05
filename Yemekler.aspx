@@ -80,7 +80,7 @@
                          &nbsp;&nbsp;&nbsp; </td>
 
                         <td class="auto-style9">
-                            <a href ="AdminKategoriler.aspx?KategoriId=<%# Eval("KategoriId") %>&islem=sil"><asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/delete.png" Width="30px" /></a>
+                            <a href ="Yemekler.aspx?YemekId=<%# Eval("YemekId") %>&islem=sil"><asp:Image ID="Image2" runat="server" Height="30px" ImageUrl="~/Images/delete.png" Width="30px" /></a>
                         </td>
 
                         <td class="auto-style9">
