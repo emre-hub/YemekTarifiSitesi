@@ -64,5 +64,19 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
             conn.baglanti().Close();
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            //Once Tum Yemeklerin Durumunu False Yaptim
+            SqlCommand command = new SqlCommand("UPDATE Tbl_Yemekler SET Durum=0", conn.baglanti());
+            command.ExecuteNonQuery();
+            conn.baglanti().Close();
+            //Id'ye gore gunun yemegi sec : 
+            SqlCommand command2 = new SqlCommand("UPDATE Tbl_Yemekler SET Durum=1 WHERE YemekId=@p1", conn.baglanti());
+            command2.Parameters.AddWithValue("@p1", id);
+            command2.ExecuteNonQuery();
+            conn.baglanti().Close();
+
+        }
     }
 }
