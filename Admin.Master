@@ -1,4 +1,4 @@
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.Admin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Yemek_Tarifi_Sitesi_ASPNET.Admin" %>
 
 <!DOCTYPE html>
 
@@ -61,7 +61,7 @@
                             <td style="border: thin solid #FFFFFF"><a href ="Yemekler.aspx">Yemekler</a></td>
                         </tr>
                         <tr>
-                            <td style="border: thin solid #FFFFFF">Yorumlar</td>
+                            <td style="border: thin solid #FFFFFF"><a href ="Yorumlar.aspx">Yorumlar</a></td>
                         </tr>
                         <tr>
                             <td style="border: thin solid #FFFFFF">Mesajlar</td>
