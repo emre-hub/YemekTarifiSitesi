@@ -26,7 +26,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
 
             //Onaylanmamış Yorumlar
             SqlCommand komut2 = new SqlCommand("Select * From Tbl_Yorumlar WHERE YorumOnay=0", conn.baglanti());
-            SqlDataReader dr2 = komut.ExecuteReader();
+            SqlDataReader dr2 = komut2.ExecuteReader();
             DataList2.DataSource = dr2;
             DataList2.DataBind();
             conn.baglanti().Close();
