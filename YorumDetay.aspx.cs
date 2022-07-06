@@ -14,11 +14,11 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
         string id = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-            id = Request.QueryString["YorumId"]; 
+            id = Request.QueryString["YorumId"];
 
             SqlCommand command = new SqlCommand("SELECT YorumAdSoyad, YorumMail, YorumIcerik, YemekAd " +
-                "FROM Tbl_Yorumlar INNER JOIN Tbl_Yemekler ON Tbl_Yorumlar.YemekId=Tbl_Yemekler.YemekId" +
-                " WHERE YorumId = @p1", conn.baglanti());
+            "FROM Tbl_Yorumlar INNER JOIN Tbl_Yemekler ON Tbl_Yorumlar.YemekId=Tbl_Yemekler.YemekId" +
+            " WHERE YorumId = @p1", conn.baglanti());
 
             command.Parameters.AddWithValue("@p1", id);
 
@@ -30,6 +30,18 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
                 txtYorum.Text = dr[2].ToString();
                 txtYemek.Text = dr[3].ToString();
             }
+            conn.baglanti().Close();
+
+        }
+
+        protected void btnOnay_Click(object sender, EventArgs e)
+        {
+            SqlCommand command = new SqlCommand("UPDATE Tbl_Yorumlar SET YorumIcerik=@p1, YorumOnay=@p2 WHERE YorumId=@p3", conn.baglanti());
+            command.Parameters.AddWithValue("@p1", txtYorum.Text);
+            command.Parameters.AddWithValue("@p2", "True"); //"1"
+            command.Parameters.AddWithValue("@p3", id);
+
+            command.ExecuteNonQuery();
             conn.baglanti().Close();
         }
     }
