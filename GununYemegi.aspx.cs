@@ -17,7 +17,7 @@ namespace Yemek_Tarifi_Sitesi_ASPNET
             //SqlCommand 2 parametre alıyor
             //ilk parametre : query
             //ikinci parametre : Gerekli connection stringi parametre olarak alan, SqlConnection nesnesi.
-            SqlCommand command = new SqlCommand("Select * From Tbl_Gununyemegi", connection.baglanti());
+            SqlCommand command = new SqlCommand("Select * From Tbl_Yemekler WHERE durum=1", connection.baglanti());
             SqlDataReader read = command.ExecuteReader();
             DataList2.DataSource = read;
             DataList2.DataBind(); //DataList'teki nesnelere Eval fonksiyonu ile ekledigim column adlarini, tablom ile iliskilendirdim.
