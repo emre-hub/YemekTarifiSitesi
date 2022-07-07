@@ -25,6 +25,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
     <asp:Panel ID="Panel1" runat="server" Width="446px">
         <table class="auto-style11">
             <tr>
@@ -58,7 +59,7 @@
             <tr>
                 <td class="auto-style15"><strong>Tarif Öneren : </strong></td>
                 <td class="auto-style7">
-                    <asp:TextBox ID="txtTarifOneren" runat="server" CssClass="tb5" TextMode="Email" Width="250px"></asp:TextBox>
+                    <asp:TextBox ID="txtTarifOneren" runat="server" CssClass="tb5" Width="250px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
@@ -68,11 +69,19 @@
                 </td>
             </tr>
             <tr>
+                <td class="auto-style15"><strong>Kategori : </strong></td>
+                <td class="auto-style7">
+                    <asp:DropDownList ID="DropDownList1" runat="server" Width="250px">
+                    </asp:DropDownList>
+                </td>
+            </tr>
+            <tr>
                 <td class="auto-style14">&nbsp;</td>
                 <td class="auto-style7"><strong>
-                    <asp:Button ID="btnTarifiOnayla" runat="server" CssClass="auto-style8" Height="35px" Text="Tarifi Onayla" Width="150px" />
+                    <asp:Button ID="btnTarifiOnayla" runat="server" CssClass="auto-style8" Height="35px" OnClick="btnTarifiOnayla_Click" Text="Tarifi Onayla" Width="150px" />
                     </strong></td>
             </tr>
         </table>
     </asp:Panel>
+     
 </asp:Content>
